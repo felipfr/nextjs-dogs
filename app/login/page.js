@@ -6,10 +6,6 @@ import { UserContext } from "@/src/UserContext";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 
-export const metadata = {
-  title: "Login",
-};
-
 export default function Home() {
   const { login } = React.useContext(UserContext);
   const router = useRouter();
