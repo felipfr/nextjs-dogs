@@ -2,8 +2,7 @@
 import React from 'react';
 import styles from './Header.module.css';
 import Link from 'next/link';
-import Image from 'next/image';
-import logo from '../Assets/dogs.svg';
+import Logo from '../Assets/dogs.svg';
 import { UserContext } from '../UserContext';
 
 const Header = () => {
@@ -13,7 +12,7 @@ const Header = () => {
     <header className={styles.header}>
       <nav className={`${styles.nav} container`}>
         <Link className={styles.logo} href="/" aria-label="Dogs - Home">
-          <Image src={logo} alt="Logo" width={28} height={22} priority />
+          <Logo />
         </Link>
         {data ? (
           <Link className={styles.login} href="/conta">

@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import styles from './UserPhotoPost.module.css';
 import useForm from '../../Hooks/useForm';

@@ -1,5 +1,4 @@
 import React from 'react';
-import Image from "next/image";
 import Enviar from "../../Assets/enviar.svg";
 import useFetch from '../../Hooks/useFetch';
 import Error from '../Helper/Error';
@@ -34,7 +33,7 @@ const PhotoCommentsForm = ({ id, setComments, single }) => {
         onChange={({ target }) => setComment(target.value)}
       />
       <button className={styles.button}>
-      <Image src={Enviar} alt="Enviar" width={43} height={31} priority />
+      <Enviar />
       </button>
       <Error error={error} />
     </form>
