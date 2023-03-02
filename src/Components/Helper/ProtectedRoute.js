@@ -1,15 +1,15 @@
-'use client'
-import React from 'react';
-import { UserContext } from '../../UserContext';
-import { useRouter } from 'next/navigation'
+"use client";
+import React from "react";
+import { UserContext } from "../../UserContext";
+import { useRouter } from "next/navigation";
 
 const ProtectedRoute = ({ children }) => {
-const redirect = useRouter();
+  const redirect = useRouter();
   const { login } = React.useContext(UserContext);
 
   React.useEffect(() => {
     if (!login) {
-      redirect.push('/login');
+      redirect.push("/login");
     }
   }, [login, redirect]);
 
@@ -17,4 +17,3 @@ const redirect = useRouter();
 };
 
 export default ProtectedRoute;
-
