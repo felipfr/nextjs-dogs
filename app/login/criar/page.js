@@ -1,5 +1,5 @@
 import styles from "../Login.module.css";
-import LoginCreate from "../../src/Components/Login/LoginCreate";
+import LoginCreate from "../../../src/Components/Login/LoginCreate";
 
 export default function Criar() {
   return (

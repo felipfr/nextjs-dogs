@@ -1,7 +1,7 @@
-import ProtectedRoute from "../../src/Components/Helper/ProtectedRoute";
+import ProtectedRoute from "../../../src/Components/Helper/ProtectedRoute";
 import React from "react";
-import UserHeader from "../../src/Components/User/UserHeader";
-import UserStats from "../../src/Components/User/UserStats";
+import UserHeader from "../../../src/Components/User/UserHeader";
+import UserStats from "../../../src/Components/User/UserStats";
 
 export default function Estatisticas() {
   return (
