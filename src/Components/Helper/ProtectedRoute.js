@@ -4,10 +4,10 @@ import { UserContext } from '../../UserContext';
 import { useRouter } from 'next/navigation'
 
 const ProtectedRoute = ({ children }) => {
-  const navigate = useRouter();
+  const redirect = useRouter();
 
   const { login } = React.useContext(UserContext);
-  return login ? children : navigate.push('/login');
+  return login ? children : redirect.push('/login');
 };
 
 export default ProtectedRoute;
