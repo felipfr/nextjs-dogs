@@ -2,14 +2,14 @@
 import React from 'react';
 import UserHeaderNav from './UserHeaderNav';
 import styles from './UserHeader.module.css';
-import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 
 const UserHeader = () => {
   const [title, setTitle] = React.useState('');
-  const router = useRouter();
+  const router = usePathname();
 
   React.useEffect(() => {
-    const { pathname } = router;
+    const pathname = router;
     switch (pathname) {
       case '/conta/postar':
         setTitle('Poste Sua Foto');
