@@ -1,4 +1,3 @@
-'use client'
 import Feed from "../src/Components/Feed/Feed";
 import React from 'react';
 

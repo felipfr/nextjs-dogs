@@ -1,8 +1,11 @@
-'use client'
 import ProtectedRoute from "../../../src/Components/Helper/ProtectedRoute";
 import React from "react";
 import UserHeader from "../../../src/Components/User/UserHeader";
 import UserStats from "../../../src/Components/User/UserStats";
+
+export const metadata = {
+  title: 'Estatísticas',
+};
 
 export default function Stats() {
   return (

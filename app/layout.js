@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata = {
   title: {
-    default: 'Fotos',
+    default: 'Fotos | Dogs',
     template: '%s | Dogs',
   },
   description: "Home do site Dogs, com o feed de fotos.",

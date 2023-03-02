@@ -1,18 +1,19 @@
-"use client";
-import Feed from "../../src/Components/Feed/Feed";
 import ProtectedRoute from "../../src/Components/Helper/ProtectedRoute";
 import React from "react";
 import UserHeader from "../../src/Components/User/UserHeader";
-import { UserContext } from "../../src/UserContext";
+import MyAccount from "@/src/Components/User/MyAccount";
+
+export const metadata = {
+  title: 'Minha Conta',
+};
 
 export default function Account() {
-  const { data } = React.useContext(UserContext);
 
   return (
     <ProtectedRoute>
       <section className="container">
         <UserHeader />
-        {data ? <Feed user={data.id} /> : <Feed />}
+        <MyAccount />
       </section>
     </ProtectedRoute>
   );
