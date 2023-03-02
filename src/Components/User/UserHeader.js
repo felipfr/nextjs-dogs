@@ -1,14 +1,15 @@
+'use client'
 import React from 'react';
 import UserHeaderNav from './UserHeaderNav';
 import styles from './UserHeader.module.css';
-import { useLocation } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 
 const UserHeader = () => {
   const [title, setTitle] = React.useState('');
-  const location = useLocation();
+  const router = useRouter();
 
   React.useEffect(() => {
-    const { pathname } = location;
+    const { pathname } = router;
     switch (pathname) {
       case '/conta/postar':
         setTitle('Poste Sua Foto');
@@ -19,7 +20,7 @@ const UserHeader = () => {
       default:
         setTitle('Minha Conta');
     }
-  }, [location]);
+  }, [router]);
 
   return (
     <header className={styles.header}>

@@ -2,7 +2,6 @@ import React from "react";
 import styles from "./Footer.module.css";
 import Image from "next/image";
 import logo from "../Assets/dogs-footer.svg";
-import vercel from "../Assets/powered-by-vercel.svg";
 
 const Footer = () => {
   return (

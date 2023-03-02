@@ -6,7 +6,7 @@ import { UserContext } from "@/src/UserContext";
 import { useRouter } from "next/navigation";
 import Head from "next/head";
 
-export default function Home() {
+export default function Login() {
   const { login } = React.useContext(UserContext);
   const router = useRouter();
 

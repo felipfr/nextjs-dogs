@@ -6,7 +6,7 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import Error from '../Helper/Error';
 import { PHOTO_POST } from '../../Api';
-import { useNavigate } from 'react-router-dom';
+import { useRouter } from 'next/navigation';
 import Head from '../Helper/Head';
 
 const UserPhotoPost = () => {
@@ -15,10 +15,10 @@ const UserPhotoPost = () => {
   const idade = useForm('number');
   const [img, setImg] = React.useState({});
   const { data, error, loading, request } = useFetch();
-  const navigate = useNavigate();
+  const navigate = useRouter();
 
   React.useEffect(() => {
-    if (data) navigate('/conta');
+    if (data) navigate.push('/conta');
   }, [data, navigate]);
 
   function handleSubmit(event) {

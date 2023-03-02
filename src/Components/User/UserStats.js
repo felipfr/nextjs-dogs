@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Head from '../Helper/Head';
 import useFetch from '../../Hooks/useFetch';

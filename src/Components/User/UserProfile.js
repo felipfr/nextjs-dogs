@@ -1,16 +1,12 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
 import Feed from '../Feed/Feed';
-import Head from '../Helper/Head';
+import React from 'react';
 
-const UserProfile = () => {
-  const { user } = useParams();
+const UserProfile = ({ id }) => {
 
   return (
     <section className="container mainSection">
-      <Head title={user} />
-      <h1 className="title">{user}</h1>
-      <Feed user={user} />
+      <h1 className="title">{id}</h1>
+      <Feed user={id} />
     </section>
   );
 };

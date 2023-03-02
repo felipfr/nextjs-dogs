@@ -1,11 +1,7 @@
 import LoginPasswordLost from "@/src/Components/Login/LoginPasswordLost";
 import styles from "../Login.module.css";
 
-export const metadata = {
-  title: "Perdeu a Senha",
-};
-
-export default function Home() {
+export default function Perdeu() {
   return (
     <section className={styles.login}>
       <div className={styles.forms}>

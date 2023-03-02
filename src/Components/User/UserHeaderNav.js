@@ -1,19 +1,22 @@
-import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
-import { UserContext } from '../../UserContext';
-import { ReactComponent as MinhasFotos } from '../../Assets/feed.svg';
-import { ReactComponent as Estatisticas } from '../../Assets/estatisticas.svg';
-import { ReactComponent as AdicionarFoto } from '../../Assets/adicionar.svg';
-import { ReactComponent as Sair } from '../../Assets/sair.svg';
-import styles from './UserHeaderNav.module.css';
-import useMedia from '../../Hooks/useMedia';
+import AdicionarFoto from "../../Assets/adicionar.svg";
+import Estatisticas from "../../Assets/estatisticas.svg";
+import Image from "next/image";
+import Link from "next/link";
+import MinhasFotos from "../../Assets/feed.svg";
+import React from "react";
+import Sair from "../../Assets/sair.svg";
+import styles from "./UserHeaderNav.module.css";
+import useMedia from "../../Hooks/useMedia";
+import { UserContext } from "../../UserContext";
+import { useRouter } from "next/navigation";
 
 const UserHeaderNav = () => {
   const { userLogout } = React.useContext(UserContext);
-  const mobile = useMedia('(max-width: 40rem)');
+  const mobile = useMedia("(max-width: 40rem)");
   const [mobileMenu, setMobileMenu] = React.useState(false);
+  const router = useRouter();
 
-  const { pathname } = useLocation();
+  const { pathname } = router;
   React.useEffect(() => {
     setMobileMenu(false);
   }, [pathname]);
@@ -35,21 +38,39 @@ const UserHeaderNav = () => {
           mobileMenu && styles.navMobileActive
         }`}
       >
-        <NavLink to="/conta" end>
-          <MinhasFotos />
-          {mobile && 'Minhas Fotos'}
-        </NavLink>
-        <NavLink to="/conta/estatisticas">
-          <Estatisticas />
-          {mobile && 'Estatísticas'}
-        </NavLink>
-        <NavLink to="/conta/postar">
-          <AdicionarFoto />
-          {mobile && 'Adicionar Foto'}
-        </NavLink>
+        <Link href="/conta" end>
+          <Image
+            src={MinhasFotos}
+            alt="Minhas Fotos"
+            width={20}
+            height={20}
+            priority
+          />
+          {mobile && "Minhas Fotos"}
+        </Link>
+        <Link href="/conta/estatisticas">
+          <Image
+            src={Estatisticas}
+            alt="Estatísticas"
+            width={20}
+            height={20}
+            priority
+          />
+          {mobile && "Estatísticas"}
+        </Link>
+        <Link href="/conta/postar">
+          <Image
+            src={AdicionarFoto}
+            alt="Adicionar Foto"
+            width={20}
+            height={20}
+            priority
+          />
+          {mobile && "Adicionar Foto"}
+        </Link>
         <button onClick={userLogout}>
-          <Sair />
-          {mobile && 'Sair'}
+          <Image src={Sair} alt="Sair" width={20} height={20} priority />
+          {mobile && "Sair"}
         </button>
       </nav>
     </>

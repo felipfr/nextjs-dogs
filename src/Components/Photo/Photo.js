@@ -1,14 +1,13 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import useFetch from '../../Hooks/useFetch';
-import { PHOTO_GET } from '../../Api';
+'use client'
 import Error from '../Helper/Error';
+import Head from '../Helper/Head';
 import Loading from '../Helper/Loading';
 import PhotoContent from './PhotoContent';
-import Head from '../Helper/Head';
+import React from 'react';
+import useFetch from '../../Hooks/useFetch';
+import { PHOTO_GET } from '../../Api';
 
-const Photo = () => {
-  const { id } = useParams();
+const Photo = ({ id }) => {
   const { data, loading, error, request } = useFetch();
 
   React.useEffect(() => {
