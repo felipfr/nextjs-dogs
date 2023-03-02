@@ -6,7 +6,7 @@ import Input from '../Forms/Input';
 import Button from '../Forms/Button';
 import Error from '../Helper/Error';
 import { PHOTO_POST } from '../../Api';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 import Head from '../Helper/Head';
 
 const UserPhotoPost = () => {

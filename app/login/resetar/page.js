@@ -1,5 +1,5 @@
 import styles from "../Login.module.css";
-import LoginPasswordReset from "@/src/Components/Login/LoginPasswordReset";
+import LoginPasswordReset from "../../src/Components/Login/LoginPasswordReset";
 
 export default function Resetar() {
   return (

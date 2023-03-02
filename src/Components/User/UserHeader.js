@@ -2,7 +2,7 @@
 import React from 'react';
 import UserHeaderNav from './UserHeaderNav';
 import styles from './UserHeader.module.css';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const UserHeader = () => {
   const [title, setTitle] = React.useState('');
