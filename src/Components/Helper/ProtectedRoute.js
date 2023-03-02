@@ -4,10 +4,17 @@ import { UserContext } from '../../UserContext';
 import { useRouter } from 'next/navigation'
 
 const ProtectedRoute = ({ children }) => {
-  const redirect = useRouter();
-
+const redirect = useRouter();
   const { login } = React.useContext(UserContext);
-  return login ? children : redirect.push('/login');
+
+  React.useEffect(() => {
+    if (!login) {
+      redirect.push('/login');
+    }
+  }, [login, redirect]);
+
+  return login ? children : null;
 };
 
 export default ProtectedRoute;
+
