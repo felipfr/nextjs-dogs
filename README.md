@@ -1,8 +1,8 @@
 <div align="center">
 
-![Logo](https://raw.githubusercontent.com/felipfr/nextjs-dogs/master/public/img/logo.png)
+[![Logo](https://raw.githubusercontent.com/felipfr/nextjs-dogs/master/public/img/logo.png)]
 
-![Powered by Vercel](https://raw.githubusercontent.com/felipfr/nextjs-dogs/1658a21f4a5c1bda5536350d9a202a9cb32a3a9b/src/Assets/powered-by-vercel.svg)
+[![Powered by Vercel](https://raw.githubusercontent.com/felipfr/nextjs-dogs/1658a21f4a5c1bda5536350d9a202a9cb32a3a9b/src/Assets/powered-by-vercel.svg)](https://vercel.com/)
 
 </div>
 
