@@ -1,38 +1,34 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<div align="center">
 
-## Getting Started
+![Logo](https://raw.githubusercontent.com/felipfr/nextjs-dogs/master/public/img/logo.png)
 
-First, run the development server:
+![Powered by Vercel](https://raw.githubusercontent.com/felipfr/nextjs-dogs/1658a21f4a5c1bda5536350d9a202a9cb32a3a9b/src/Assets/powered-by-vercel.svg)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+</div>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Next.js + Dogs
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+O projeto original foi desenvolvido pela Origamid usando o "Create React App". Neste fork, baseado no Next.js 13, aproveitei os recursos de SSR e algumas das novas funcionalidades, como a pasta "app" e o sistema de roteamento aprimorado. Também está sendo utilizado o serviço de continuous deployment (CD) na Vercel.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Aprendizados
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+A migração do "Create React App" para o Next.js 13 me permitiu entender as vantagens do Server-Side Rendering (SSR) em relação a Single-Page Applications (SPAs), como melhoria de desempenho, otimização para mecanismos de busca e melhor experiência do usuário. O maior desafio foi adaptar as diferenças entre as duas estruturas e a aplicar de acordo com as necessidades do Next.js. Isso envolveu alterações em metadata, componentes, imagens, links e principalmente o sistema de roteamento. Além disso, utilizei o serviço de continuous deployment da Vercel, que automatizou o processo de implantação, permitindo que eu me concentrasse apenas no processo de desenvolvimento.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Funcionalidades
 
-## Learn More
+- Cadastro de usuário
+- Postagem de fotos, com opção de delete
+- Feed de fotos com scroll infinito e quantidade de visualizações
+- Criação de comentários
+- Página de estatísticas com informações de todas as suas postagens
 
-To learn more about Next.js, take a look at the following resources:
+## Em Breve
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Redux: Para ajudar no gerenciamento de estado dos componentes
+- API: Uma nova API própria, independente de terceiros
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## Stack Utilizada
 
-## Deploy on Vercel
+**Front-end:** Next.js, React e CSS Modules
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**Back-end:** Wordpress REST Api com JSON Web Token
